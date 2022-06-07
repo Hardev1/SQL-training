@@ -132,6 +132,6 @@ INNER JOIN sakila.film_actor f ON (a.actor_id = f.actor_id)
 GROUP BY a.actor_id);
 
 /*¿Se puede alquilar ‘Academy Dinosaur’ en la tienda 1?*/
-select film.film_id, film.title, store.store_id, inventory.inventory_id
-from sakila.inventory join sakila.store using (store_id) join sakila.film using (film_id)
-where film.title = 'Academy Dinosaur' and store.store_id = 1;
+SELECT film.film_id, film.title, store.store_id, inventory.inventory_id
+FROM sakila.inventory JOIN sakila.store using (store_id) JOIN sakila.film using (film_id)
+WHERE film.title = 'Academy Dinosaur' AND store.store_id = 1;
